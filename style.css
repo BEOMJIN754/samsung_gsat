@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("assets/u43bS1.gif");
+  background-image: url("assets/jaedragon.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,6 +27,7 @@ body {
   max-width: 68vw;
   max-height: 90vh;
   object-fit: contain;
+  animation: image-fade-in 3s ease-in-out both;
 }
 
 .chat-wrapper {
@@ -35,7 +36,7 @@ body {
   left: 91%;
   z-index: 2;
   width: 45%;
-  animation: chat-arrival 1s cubic-bezier(0.22, 0.8, 0.3, 1) both;
+  animation: chat-arrival 1s cubic-bezier(0.22, 0.8, 0.3, 1) 3s both;
 }
 
 .chat-image {
@@ -57,6 +58,15 @@ body {
   line-height: 1.25;
   text-align: center;
   white-space: nowrap;
+}
+
+@keyframes image-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes chat-arrival {
